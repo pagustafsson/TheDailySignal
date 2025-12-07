@@ -1,5 +1,7 @@
 /* CSS Reset & Variables */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -9,7 +11,7 @@
     /* Typography */
     --font-serif: 'Old Standard TT', Georgia, 'Times New Roman', serif;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    
+
     /* Colors - Muted, sophisticated palette */
     --color-bg: #faf9f7;
     --color-text: #1a1a1a;
@@ -18,11 +20,11 @@
     --color-accent: #c41c1c;
     --color-border: #e6e4e0;
     --color-border-dark: #d1cfc9;
-    
+
     /* Spacing */
     --content-width: 680px;
     --content-padding: 1.5rem;
-    
+
     /* Transitions */
     --transition-fast: 0.15s ease;
 }
@@ -134,6 +136,21 @@ body {
 }
 
 .article-byline strong {
+    color: var(--color-text);
+}
+
+.article-byline a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition-fast);
+}
+
+.article-byline a:hover {
+    border-bottom-color: var(--color-accent);
+}
+
+.article-byline a strong {
     color: var(--color-text);
 }
 
@@ -302,23 +319,23 @@ body {
     html {
         font-size: 16px;
     }
-    
+
     .masthead-title {
         font-size: 2rem;
     }
-    
+
     .article-headline {
         font-size: 1.75rem;
     }
-    
+
     .article-subhead {
         font-size: 1.1rem;
     }
-    
+
     .drop-cap {
         font-size: 3.5rem;
     }
-    
+
     .article-quote {
         padding-left: 1rem;
     }
@@ -328,11 +345,11 @@ body {
     .masthead-title {
         font-size: 1.65rem;
     }
-    
+
     .article-headline {
         font-size: 1.5rem;
     }
-    
+
     .article-meta {
         flex-direction: column;
         gap: 0.25rem;
@@ -344,11 +361,12 @@ body {
     body {
         background: white;
     }
-    
-    .masthead, .site-footer {
+
+    .masthead,
+    .site-footer {
         border-color: #ccc;
     }
-    
+
     .article-image {
         max-height: 400px;
     }
