@@ -18,7 +18,7 @@ def get_today_date():
 
 def generate_article():
     """Generate a news article using Gemini."""
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.0-flash-exp')
     
     today = get_today_date()
     
